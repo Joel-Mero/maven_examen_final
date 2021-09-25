@@ -43,6 +43,19 @@ public class MainAseguradora {
 					String codigoDescuento = teclado1.nextLine();
 					System.out.println("Ingrese Número de Seguro");
 					String numeroSeguro = teclado1.nextLine();
+
+					PolizaGeneral poliza1 = new PolizaGeneral();
+					poliza1.setNombre(nombre);
+					poliza1.setDescripcion(descripcion);
+					poliza1.setAnioVigencia(anioVigencia);
+					poliza1.setCodigoPoliza(codigoPoliza);
+					poliza1.setValorPoliza(valorPoliza);
+					poliza1.setValorDescuento(codigoDescuento);
+					poliza1.setNumeroSeguro(numeroSeguro);
+
+					Poliza listaPoliza[] = new Poliza[2];
+					listaPoliza[0] = poliza1;
+
 				} else {
 					if (poliza.equals("b")) {
 						System.out.println("Ingrese Nombre");
@@ -58,15 +71,24 @@ public class MainAseguradora {
 						System.out.println("Ingrese Beneficio");
 						int beneficio = teclado.nextInt();
 
+						PolizaVip poliza2 = new PolizaVip();
+						poliza2.setNombre(nombre);
+						poliza2.setDescripcion(descripcion);
+						poliza2.setAnioVigencia(anioVigencia);
+						poliza2.setCodigoPoliza(codigoPoliza);
+						poliza2.setValorPoliza(valorPoliza);
+						poliza2.setBeneficio(codigoPoliza);
+
 						Poliza listaPoliza[] = new Poliza[2];
-					
+						listaPoliza[1] = poliza2;
 					}
 				}
+
 			} else {
 				if (opcion == 2) {
 					System.out.println("Ingrese Código de Póliza");
 					String codigoPoliza = teclado1.nextLine();
-					
+
 				} else {
 					if (opcion == 3) {
 						System.out.println("Ingrese Código de Póliza");
@@ -80,6 +102,7 @@ public class MainAseguradora {
 			}
 
 		} while (opcion != 5);
+
 	}
 
 }

@@ -7,6 +7,7 @@ public class PolizaVip extends Poliza{
 	private String anioVigencia;
 	private String codigoPoliza;
 	private int valorPoliza;
+	private String beneficio;
 	
 	//Métodos SET y GET
 	public String getNombre() {
@@ -38,6 +39,12 @@ public class PolizaVip extends Poliza{
 	}
 	public void setValorPoliza(int valorPoliza) {
 		this.valorPoliza = valorPoliza;
+	}
+	public String getBeneficio() {
+		return beneficio;
+	}
+	public void setBeneficio(String beneficio) {
+		this.beneficio = beneficio;
 	}
 	
 }
